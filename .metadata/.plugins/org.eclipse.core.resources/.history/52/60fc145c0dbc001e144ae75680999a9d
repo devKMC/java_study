@@ -1,0 +1,17 @@
+package ch02_sub;
+
+public class G_interfaceSub {
+
+	void method1() {  //static으로 잡혀있기에 가져와서 사용가능?
+		System.out.println(G_message.GREETING_MESSAGE);
+		
+		System.out.println(G_message.GOODBYE_MESSAGE);
+	}
+	
+	void method2() {	
+		System.out.println(G_message.GREETING_MESSAGE);
+		
+		System.out.println(G_message.GOODBYE_MESSAGE);
+	}
+	
+}

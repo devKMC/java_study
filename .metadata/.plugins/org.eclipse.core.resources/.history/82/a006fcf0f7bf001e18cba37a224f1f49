@@ -1,0 +1,19 @@
+package Test1;
+
+
+//자동차 종류: 수동 변속기 자동차 (ManualCar) 자동 변속기 자동차(AutomaticCar)
+//기차의 종류: 여객 열차(PassengerTrain) 화물 열차(FreightTrain)
+
+
+class car
+
+public class B_ {
+
+	public static void main(String[] args) {
+		
+	
+	}
+}
+ 
+
+

@@ -1,0 +1,61 @@
+package ch02;
+
+// 캡슐화: 멤버 변수(속성)와 메서드를 묶어서 변수에 대한 조작을 ★메서드★를 통해서만 할 수 있도록 하는 것
+// 정보 은닉과 데이터 보호, ★데이터 무결성을 보장 할 수 있음 ★
+class footballPlayerB {                   //순서 1
+	private String name;
+	private String team;
+	private int goal;
+	
+	footballPlayerB (String name, String team, int goal) {       //변경할 수 없는 곳  이러한 방법이 캡슐화 //순서 3
+		this.name = name;										//위에서 private때문에 생성을 못하기에 10 ~ 14에서 생성함
+		this.team = team;
+		this.goal = goal;
+	}
+	
+	//겟터셋터 메서드 만들기
+	
+	String getName() {
+		return this.name; //반환타입 되돌려주는 것 6행의 name 
+	}
+	
+	String getTeam() {  
+		return this.team;	//값만 반환하는 애들이기에 매개변수는 필요로 하지 않음 
+	}
+	
+	int getgoal() {
+		return this.goal; 
+	}
+	
+	void setName(String name) { //셋터 메서드 :  void set(관습적)필드명 () 안에는 어떠한 값으로 바꿀건지 {/ 변경만을 위한 것
+		this.name = name;		//손흥민이라는 이름이 아닌 다른 이름을 쓰려고 할 때
+	}
+	
+	void setTeam(String team) {
+		this.team = team; //매개변수 팀으로 바꾸겠다
+	}
+	
+	void setGoal(int goal) {
+		if (goal < 0) return; //( 0보다 낮은수가 오면 바로 종료됨)
+		this.goal = goal;
+	}
+	
+	
+}
+
+
+
+public class E_Encapsulation { // 순서 2
+
+	public static void main(String[] args) {
+		
+		footballPlayerB son = new footballPlayerB("손흥민" , "토트넘" , 0);  
+		
+		son.setGoal(-1);
+		
+		System.out.println(son.getName()); // 맨위 클래스에서 정보를 바로 복사해서 가져오는 방법은 겟 사용 //순서 4
+		
+	
+	}
+
+}

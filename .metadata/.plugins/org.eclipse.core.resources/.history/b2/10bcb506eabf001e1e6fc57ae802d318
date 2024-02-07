@@ -1,0 +1,50 @@
+package ch01;
+
+
+//자동차 종류: 수동 변속기 자동차 (ManualCar) 자동 변속기 자동차(AutomaticCar)
+//기차의 종류: 여객 열차(PassengerTrain) 화물 열차(FreightTrain)
+
+
+
+
+
+public class CarTrainTest2{
+	  
+private	String vin;
+private	String color;
+private	boolean issert;
+
+	public CarTrainTest2() {
+		
+	}
+
+class TrainClass {
+private String trainNumber;
+private String departureStation;
+private String arrivalStation;
+private boolean isStart;
+
+ class ManualCar extends Car {
+	
+	private int gear;
+	void setGear() { 
+}
+
+	
+
+
+	}
+}
+
+
+
+public class CarTrainTest2 {
+
+	public static void main(String[] args) {
+		
+
+		
+		
+	}
+
+}

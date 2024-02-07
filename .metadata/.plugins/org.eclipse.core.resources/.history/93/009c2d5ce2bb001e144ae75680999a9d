@@ -1,0 +1,12 @@
+package ch02;
+
+// 캡슐화: 멤버 변수(속성)
+
+public class E_Encapsulation {
+
+	public static void main(String[] args) {
+	
+
+	}
+
+}

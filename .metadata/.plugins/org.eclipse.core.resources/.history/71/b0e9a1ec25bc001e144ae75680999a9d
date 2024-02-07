@@ -1,0 +1,28 @@
+package ch02_sub; //7일차 5-1
+
+class InterfaceSub {//implements G_message { //다중 상속을 위해서 필요한 것만 끌어써야 
+	
+	int method3 (int number) {
+		System.out.println(G_message.GREETING_MESSAGE);
+		
+		System.out.println(G_message.GOODBYE_MESSAGE);
+
+		return 3 + number;
+	}
+}
+
+public class G_interfaceSub implements G_message, G_Method{  //상수
+
+	public void method1() {   //static의 사용용도로 ch02_sub 메세지에서 스태틱변수가져옴
+		System.out.println(G_message.GREETING_MESSAGE);
+		
+		System.out.println(G_message.GOODBYE_MESSAGE);
+	}
+	
+	public void method2() {	
+		System.out.println(G_message.GREETING_MESSAGE);
+		
+		System.out.println(G_message.GOODBYE_MESSAGE);
+	}
+	
+}

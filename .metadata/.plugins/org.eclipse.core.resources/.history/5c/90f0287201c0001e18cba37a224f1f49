@@ -1,0 +1,37 @@
+package Test1;
+
+abstract class Car { 
+private String vin;
+private String color;
+private boolean isStart;
+   //스위치처럼 해야해서
+
+void isStart () {     // 원래의 논리값 power의 부정값         						    전원버튼
+	isStart = !isStart;   // 부정연산자를 사용하여 부정값 입력       
+}    
+
+void call (String toTelNumber) {       								 // 외부에서 가져와야함 전화번호가 있어야하기에        전화걸기
+if (!power) return; //이상태일때는 밑에를 실행하지말아라고 return 사용		   	// 이것이 참 (true) 일때만 실행하라고 if를 사용함 ex)if(power); 가능
+System.out.println(toTelNumber + "로 전화를 겁니다.");
+}
+static void emergency () {
+System.out.println("112로 전화를 겁니다.");
+}
+void getInformationn() {                                        // 클래스에 직접 속하지 않은 인스턴스에 직접 속함 , 복사본 만든다 호출하기 쉬움
+if (!power) return;  //
+System.out.println("===="+ telNumber + "====");
+System.out.println("제조사 : " + maker);
+System.out.println("모델명 : " + modelName);
+System.out.println("소유자 : " + owner);
+}
+
+}
+
+public class Test4 {
+
+	public static void main(String[] args) {
+	
+		
+	}
+
+}

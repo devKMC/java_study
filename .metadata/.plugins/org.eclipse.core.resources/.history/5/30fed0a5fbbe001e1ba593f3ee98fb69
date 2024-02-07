@@ -1,0 +1,99 @@
+package ch03;
+
+
+
+
+import java.util.InputMismatchException;
+
+import java.util.Scanner;
+
+//　마방진이란 연속된 자연수를 가로, 세로, 대각선의 합이 같아지도록 정사각형 모양으로 배열한 것을 말하며, 
+
+// 크기 N × N인 마방진을 N차 마방진이라고도 한다. 보통 크기가 1, 2인 마방진은 고려하지 않는다.
+
+// 크기가 홀수인 경우 :　1) 마지막 행의 가운데 열에 1을 배치한다.　2) 항상 오른쪽 아래 칸을 검사한다. 비어 있으면 다음 숫자를 기입하고 
+
+//비어 있지 않으면 마지막 위치에서 바로 위로 이동한다. 
+
+// 
+
+public class mabangjin {
+
+
+
+
+
+public static void main(String[] args) {
+
+Scanner scan = new Scanner(System.in);
+
+int number;
+
+while(true) { //무한루프돌려주는것을 막아주기 위해서 break 사용
+
+try { // 예외를 설명하기위해 try catch 씀 타입이 다른걸 막아줄려고 예외?
+
+System.out.println("마방진의 차수를 입력하세용");
+
+number = scan.nextInt();
+
+if(number%2==1) break; //break 로 멈춰준다 ? return도 되는듯...
+
+System.out.println("홀수만 입력하세용");
+
+} catch (Exception e) {System.out.println("숫자만 입력해야 합니다");
+
+}
+
+}
+
+int array[][] = new int[number][number]; //2차 배열 (계속 늘릴 수 있음)
+
+int row , col; // row major ordering 행우선배열
+
+// column major ordering 열 우선 배열
+
+int cnt; // 카운트 변수
+
+row=0 ; col=(number/2);
+
+for(cnt=1; cnt<=number*number; cnt++) { //for문을 사용
+
+array[row][col] = cnt;
+
+if(cnt % number==0) {
+
+row++;
+
+if(row == number) row=0;
+
+}else {
+
+row--;col++;
+
+if(row == -1) row=number-1;
+
+if(col == number)col=0;
+
+}
+
+}
+
+//출력
+
+for(row=0; row<=number-1; row++) {
+
+for(col=0; col<=number-1; col++) {
+
+System.out.printf("%3d",array[row][col]);; //printf 사용시 타입에 무관하게 넣어서 출력할 수 있음
+
+}
+
+System.out.println();
+
+}
+
+}
+
+}
+

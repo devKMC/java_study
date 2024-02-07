@@ -1,0 +1,46 @@
+package ch01;
+
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class test33 {
+
+    public static void main(String[] args) {
+       System.out.println("자릿수를 알고 싶은 것을 입력");
+        Scanner in =new Scanner(System.in);
+        int count=0;
+        int num;
+        int input = in.nextInt();
+        
+        
+        System.out.println("1의 자릿수의 값은" + (input%10)+ "이다.");
+        System.out.println("10의 자릿수의 값은" + ((input%100)/10)+ "이다.");           
+        System.out.println("100의 자릿수의 값은"+ ((input%100)/100)+ "이다.");    
+        System.out.println("100의 자릿수의 값은"+ ((input%100)/1000)+ "이다.");       
+        System.out.println("100의 자릿수의 값은"+ ((input%100)/10000)+ "이다.");      
+        System.out.println("100의 자릿수의 값은"+ ((input%100)/100000)+ "이다.");      
+        System.out.println("100의 자릿수의 값은"+ ((input%100)/1000000)+ "이다.");     
+        System.out.println("100의 자릿수의 값은"+ ((input%100)/10000000)+ "이다.");     
+        System.out.println("100의 자릿수의 값은"+ ((input%100)/100000000)+ "이다.");     
+        System.out.println("100의 자릿수의 값은"+ ((input%100)/1000000000)+ "이다.");
+        
+        while(input>0) {
+            input/=10;
+            count++;
+        
+        
+           
+        
+        }
+        
+        System.out.println(count+"는 자릿수입니다.");
+      
+  
+        
+    }
+
+   
+      
+   }
+

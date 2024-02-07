@@ -1,0 +1,56 @@
+package ch03; //8일차 2
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class B_Package {
+
+	public static void main(String[] args) {
+		
+		// Wrapper 클래스: 기본형 데이터 타입을 참조형 데이터 타입으로 다룰 수 있도록 하는 클래스
+		// 일반적으로 기본형 데이터 타입의 풀네임에 첫글자를 대문자로 지정하면 Wrapper 클래스가 됨
+		
+		Integer wrapperInt = 10;
+		Double wrapperDouble = 10.0;
+		Boolean wrapperBoolean = false;
+		String wrapperString = "String";
+		
+		// 자주 사용하는 기능
+		// parse 메서드: 문자열을 특정 타입으로 반환 
+		int number = Integer.parseInt("123"); 
+		// toStirng 메서드: 특정 타입의 값을 문자열로 변환
+		String string = Integer.toString(123); //0 초과 정수를 입력할때 자리의 수는 몇개 고 각 숫자는 몇을 의미하는가? 를출력
+		// 1234567890
+		
+		//10
+		
+		//1의자리는 뭐다 1: 0
+		//2의자리는 뭐다 10 : 9
+		//10자리까지
+		
+		//"8" 아스키코드 56이면 8임 
+		
+		// Collection Framework: java에서 데이터 구조에 대한 표준화된 기법을 제공
+		
+		// List: 데이터를 저장할 때 중복 허용하고 순서가 존재함 (인덱스로 접근가능)
+		List<Integer> arrayList; //int[] arrayList; 비슷한 느낌
+		// ArrayList: List 중에서 내부 배열을 사용하여 인덱스를 사용한 검색이 빠릅니다
+		arrayList = new ArrayList<>(); // 자주 쓰는 것
+		// LinkedList: 이중 연결 기법을 사용하여 추가, 삭제가 빠름
+//		arrayList = new LinkedList<>();// 자주 쓰지 않는 것
+		
+		// add(): List에 요소를 추가하는 것
+		// 추가할 요소의 데이터 타입은 반드시 제너릭으로 지정한 타입으로만 지정 가능
+		arrayList.add(0);
+//		arrayList.add(""); // 타입을 object를 사용하면 문자열도 사용 가능하다
+		
+		// get(): List 의 특정 인덱스 요소에 접근
+		// List 인덱스 범위를 초과하는 인덱스를 지정할 수 없음
+		// 기본형 데이터타입의 변수로 반환값을 받을 경우 null 값을 받을 수 있음을 주의
+		int arrayElement = arrayList.get(0); //0번 인덱스값을 가져옴
+		
+		System.out.println(arrayElement);
+		}
+
+}
